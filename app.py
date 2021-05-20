@@ -25,7 +25,7 @@ def return_prediction(model,scaler,sample_json):
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'someRandomKey'
+# app.config['SECRET_KEY'] = 'someRandomKey'
 
 flower_model = load_model("final_iris_model.h5")
 flower_scaler = joblib.load("iris_scaler.pkl")
