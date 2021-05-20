@@ -2,5 +2,5 @@ Flask_WTF==0.14.3
 Flask==1.0.3
 numpy==1.19.2
 joblib==0.14.1
-tensorflow==2.4.0
+tensorflow
 WTForms==2.3.3
