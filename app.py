@@ -29,7 +29,6 @@ app = Flask(__name__)
 flower_model = load_model("final_iris_model.h5")
 flower_scaler = joblib.load("iris_scaler.pkl")
 
-
 class FlowerForm(FlaskForm):
 	sep_len = TextField('Sepal Length')
 	sep_wid = TextField('Sepal Width')
@@ -39,7 +38,7 @@ class FlowerForm(FlaskForm):
 	submit = SubmitField('Analyze')
 
 
-@app.route('/', methods=['GET','POST'])
+@app.route("/", methods=['GET','POST'])
 def index():
 	form = FlowerForm()
 	if form.validate_on_submit():
@@ -53,7 +52,7 @@ def index():
 	return render_template('home.html', form=form)
 
 
-@app.route('/prediction')
+@app.route("/prediction")
 def prediction():
 	content = {}
 	print("sep len: ", session['sep_len'])
@@ -66,5 +65,5 @@ def prediction():
 	return render_template('prediction.html', results=results)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True)
