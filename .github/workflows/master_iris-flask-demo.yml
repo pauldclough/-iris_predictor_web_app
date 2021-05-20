@@ -20,7 +20,7 @@ jobs:
     - name: Set up Python version
       uses: actions/setup-python@v1
       with:
-        python-version: '3.8'
+        python-version: '3.6'
 
     - name: Create and start virtual environment
       run: |
@@ -59,4 +59,4 @@ jobs:
         with:
           app-name: 'iris-flask-demo'
           slot-name: 'production'
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_38ba090847754f7786030a3aa0fdbb11 }}
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_f499d1b2b1a845c4b56f3b0eb178b748 }}
